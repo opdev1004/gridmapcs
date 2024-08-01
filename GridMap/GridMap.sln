@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GridMap", "GridMap.csproj", "{4DBA72E0-1FEB-46D5-914F-420E31098985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "..\UnitTest\UnitTest.csproj", "{D612D0AA-888D-4CED-A00A-F1C78516416F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DBA72E0-1FEB-46D5-914F-420E31098985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBA72E0-1FEB-46D5-914F-420E31098985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBA72E0-1FEB-46D5-914F-420E31098985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBA72E0-1FEB-46D5-914F-420E31098985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D612D0AA-888D-4CED-A00A-F1C78516416F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D612D0AA-888D-4CED-A00A-F1C78516416F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D612D0AA-888D-4CED-A00A-F1C78516416F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D612D0AA-888D-4CED-A00A-F1C78516416F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7DFA5FF1-E2D3-434F-A8F5-160D227E581D}
+	EndGlobalSection
+EndGlobal

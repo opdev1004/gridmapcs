@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Title>GridMap CS</Title>
+    <Version>$(VersionPrefix)0.0.1</Version>
+    <Authors>opdev1004</Authors>
+    <Copyright>Copyright (c) 2024 Victor Chanil Park</Copyright>
+    <Description>GridMap is a library for Grid Map based on string. This library provides the shortest path finding algorithms and other features for Grid Map.</Description>
+    <PackageProjectUrl>https://github.com/opdev1004/gridmapcs</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/opdev1004/gridmapcs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>GridMap; Shortest Path; Game; Map; A Star; BFS; Path Finding;</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
