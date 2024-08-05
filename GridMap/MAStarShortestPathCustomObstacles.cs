@@ -2,11 +2,11 @@
 {
 	public partial class GridMap
 	{
-		public static List<(int y, int x, string name)> MAStarShortestPathAD(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<string> obstacles)
+		public static List<(int y, int x, string name)> MAStarShortestPath(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<(int y, int x)> obstacles)
 		{
 			int numRows = TwoDMap[0].Count;
 			int numCols = TwoDMap.Count;
-			var directions = new List<(int, int)> { (1, 1), (1, -1), (-1, 1), (-1, -1), (0, 1), (1, 0), (0, -1), (-1, 0) };
+			var directions = new List<(int, int)> { (0, 1), (1, 0), (0, -1), (-1, 0) };
 
 			var openSet = new SortedSet<(int fScore, (int, int) position)>(Comparer<(int, (int, int))>.Create((a, b) => a.Item1 == b.Item1 ? a.Item2.CompareTo(b.Item2) : a.Item1.CompareTo(b.Item1)));
 			var cameFrom = new Dictionary<(int, int), (int, int)>();
@@ -31,7 +31,7 @@
 					int newX = current.Item2 + direction.Item2;
 					var newPosition = (newY, newX);
 
-					if (newX >= 0 && newX < numRows && newY >= 0 && newY < numCols && !obstacles.Contains(TwoDMap[newY][newX]))
+					if (newX >= 0 && newX < numRows && newY >= 0 && newY < numCols && !obstacles.Contains(newPosition))
 					{
 						int tentativeGScore = gScore[current] + 1;
 

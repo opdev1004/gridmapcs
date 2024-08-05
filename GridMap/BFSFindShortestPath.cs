@@ -2,7 +2,7 @@
 {
 	public partial class GridMap
 	{
-		public static List<(int, int, string)> BFSFindShortestPath(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<string> obstacles)
+		public static List<(int y, int x, string name)> BFSFindShortestPath(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<string> obstacles)
 		{
 			int numRows = TwoDMap[0].Count;
 			int numCols = TwoDMap.Count;

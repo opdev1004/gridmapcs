@@ -2,7 +2,7 @@
 {
 	public partial class GridMap
 	{
-		public static List<(int y, int x, string name)> MAStarShortestPathAD(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<string> obstacles)
+		public static List<(int y, int x, string name)> MAStarShortestPathAD(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<(int y, int x)> obstacles)
 		{
 			int numRows = TwoDMap[0].Count;
 			int numCols = TwoDMap.Count;
@@ -31,7 +31,7 @@
 					int newX = current.Item2 + direction.Item2;
 					var newPosition = (newY, newX);
 
-					if (newX >= 0 && newX < numRows && newY >= 0 && newY < numCols && !obstacles.Contains(TwoDMap[newY][newX]))
+					if (newX >= 0 && newX < numRows && newY >= 0 && newY < numCols && !obstacles.Contains(newPosition))
 					{
 						int tentativeGScore = gScore[current] + 1;
 

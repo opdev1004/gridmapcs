@@ -4,9 +4,10 @@ GridMap is a library for Grid Map based on string. This library provides the sho
 
 ## 👨‍🏫 Notice
 
-### 🎉 Releasing version 0.0.1
+### 🎉 Releasing version 0.0.2
 
-☠☠☠
+- Added custom obstacles functions for BFS and A star shortest path finding algorithm.
+- Added CSVToMap and MapToCSV functions for using CSV for mapping.
 
 ## 🛠 Requirements
 

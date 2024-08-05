@@ -2,7 +2,7 @@
 {
 	public partial class GridMap
 	{
-		public static List<(int, int, string)> MAStarShortestPath(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<string> obstacles)
+		public static List<(int y, int x, string name)> MAStarShortestPath(List<List<string>> TwoDMap, (int y, int x) start, (int y, int x) goal, List<string> obstacles)
 		{
 			int numRows = TwoDMap[0].Count;
 			int numCols = TwoDMap.Count;
@@ -29,22 +29,22 @@
 				{
 					int newY = current.Item1 + direction.Item1;
 					int newX = current.Item2 + direction.Item2;
-					var neighbor = (newY, newX);
+					var newPosition = (newY, newX);
 
 					if (newX >= 0 && newX < numRows && newY >= 0 && newY < numCols && !obstacles.Contains(TwoDMap[newY][newX]))
 					{
 						int tentativeGScore = gScore[current] + 1;
 
-						if (!gScore.TryGetValue(neighbor, out int value) || tentativeGScore < value)
+						if (!gScore.TryGetValue(newPosition, out int value) || tentativeGScore < value)
 						{
-							cameFrom[neighbor] = current;
+							cameFrom[newPosition] = current;
 							value = tentativeGScore;
-							gScore[neighbor] = value;
-							fScore[neighbor] = gScore[neighbor] + ManhattanHeuristic(neighbor, goal);
+							gScore[newPosition] = value;
+							fScore[newPosition] = gScore[newPosition] + ManhattanHeuristic(newPosition, goal);
 
-							if (!openSet.Contains((fScore[neighbor], neighbor)))
+							if (!openSet.Contains((fScore[newPosition], newPosition)))
 							{
-								openSet.Add((fScore[neighbor], neighbor));
+								openSet.Add((fScore[newPosition], newPosition));
 							}
 						}
 					}
